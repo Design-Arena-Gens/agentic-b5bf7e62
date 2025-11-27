@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ペリカンヘルライダー - Heavy Metal Ver</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Courier New', monospace;
+        }
+        .container {
+            text-align: center;
+            background: rgba(0,0,0,0.3);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 40px rgba(255,0,0,0.3);
+        }
+        h1 {
+            color: #ff0055;
+            text-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        svg {
+            filter: drop-shadow(0 0 20px rgba(255,0,0,0.5));
+            background: rgba(0,0,0,0.5);
+            border-radius: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ペリカンヘルライダー - Heavy Metal Ver</h1>
+        <svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <!-- グラデーション定義 -->
+                <linearGradient id="metalGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#8b9dc3;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#4a5568;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#2d3748;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="metalGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#718096;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#4a5568;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="chromeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#e2e8f0;stop-opacity:1" />
+                    <stop offset="30%" style="stop-color:#cbd5e0;stop-opacity:1" />
+                    <stop offset="60%" style="stop-color:#a0aec0;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#718096;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="redGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ff0000;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#cc0000;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="engineGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#ff4500;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#ff6b00;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#ffa500;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="yellowGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ffff00;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#ffcc00;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="blackMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#3a3a3a;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#1a1a1a;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+                </linearGradient>
+                <radialGradient id="exhaustGlow">
+                    <stop offset="0%" style="stop-color:#00ffff;stop-opacity:0.9" />
+                    <stop offset="50%" style="stop-color:#0080ff;stop-opacity:0.6" />
+                    <stop offset="100%" style="stop-color:#0000ff;stop-opacity:0.2" />
+                </radialGradient>
+                <linearGradient id="tireGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#000000;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#2a2a2a;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="pelicanBody" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#f0f0f0;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#d0d0d0;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#a0a0a0;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="pelicanBeak" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#ff8c00;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#ff6600;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#cc5500;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="wingMetal" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#b8b8b8;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#909090;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#606060;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+
+            <!-- 背景エフェクト -->
+            <rect width="800" height="600" fill="#0a0a0a"/>
+
+            <!-- バイク本体 - 後輪 -->
+            <g id="rearWheel" transform="translate(200,400)">
+                <!-- タイヤ外周 -->
+                <circle cx="0" cy="0" r="55" fill="url(#tireGrad)" stroke="#000" stroke-width="2"/>
+                <!-- トレッドパターン -->
+                <g id="tread">
+                    <path d="M -50,-10 L -55,-10 L -55,10 L -50,10" fill="#0a0a0a"/>
+                    <path d="M -35,-35 L -40,-35 L -40,-25 L -35,-25" fill="#0a0a0a"/>
+                    <path d="M -10,-50 L -10,-55 L 10,-55 L 10,-50" fill="#0a0a0a"/>
+                    <path d="M 25,-40 L 25,-45 L 35,-45 L 35,-40" fill="#0a0a0a"/>
+                    <path d="M 45,-20 L 50,-20 L 50,-10 L 45,-10" fill="#0a0a0a"/>
+                    <path d="M 50,10 L 55,10 L 55,20 L 50,20" fill="#0a0a0a"/>
+                    <path d="M 35,35 L 40,35 L 40,40 L 35,40" fill="#0a0a0a"/>
+                    <path d="M 10,50 L 10,55 L -10,55 L -10,50" fill="#0a0a0a"/>
+                    <path d="M -25,40 L -25,45 L -35,45 L -35,40" fill="#0a0a0a"/>
+                    <path d="M -45,15 L -50,15 L -50,5 L -45,5" fill="#0a0a0a"/>
+                </g>
+                <!-- ホイールリム -->
+                <circle cx="0" cy="0" r="42" fill="url(#chromeGrad)" stroke="#4a5568" stroke-width="1"/>
+                <!-- スポーク構造 -->
+                <g id="spokes" stroke="#2d3748" stroke-width="2" fill="none">
+                    <line x1="0" y1="0" x2="0" y2="-38"/>
+                    <line x1="0" y1="0" x2="33" y2="-19"/>
+                    <line x1="0" y1="0" x2="33" y2="19"/>
+                    <line x1="0" y1="0" x2="0" y2="38"/>
+                    <line x1="0" y1="0" x2="-33" y2="19"/>
+                    <line x1="0" y1="0" x2="-33" y2="-19"/>
+                    <line x1="0" y1="0" x2="27" y2="-27"/>
+                    <line x1="0" y1="0" x2="27" y2="27"/>
+                    <line x1="0" y1="0" x2="-27" y2="27"/>
+                    <line x1="0" y1="0" x2="-27" y2="-27"/>
+                </g>
+                <!-- ブレーキディスク -->
+                <circle cx="5" cy="0" r="35" fill="#ff4500" opacity="0.3" stroke="#ff0000" stroke-width="1"/>
+                <circle cx="5" cy="0" r="30" fill="none" stroke="#cc0000" stroke-width="1"/>
+                <circle cx="5" cy="0" r="25" fill="none" stroke="#aa0000" stroke-width="1"/>
+                <!-- ハブ中心 -->
+                <circle cx="0" cy="0" r="12" fill="url(#blackMetal)" stroke="#1a1a1a" stroke-width="1"/>
+                <!-- ハブボルト -->
+                <circle cx="0" cy="-8" r="2" fill="#4a5568"/>
+                <circle cx="7" cy="-4" r="2" fill="#4a5568"/>
+                <circle cx="7" cy="4" r="2" fill="#4a5568"/>
+                <circle cx="0" cy="8" r="2" fill="#4a5568"/>
+                <circle cx="-7" cy="4" r="2" fill="#4a5568"/>
+                <circle cx="-7" cy="-4" r="2" fill="#4a5568"/>
+            </g>
+
+            <!-- スイングアーム -->
+            <path d="M 200,400 L 240,390 L 280,385 L 320,385 L 350,390" fill="url(#metalGrad1)" stroke="#2d3748" stroke-width="2"/>
+            <path d="M 200,400 L 240,395 L 280,392 L 320,392 L 350,395" fill="url(#metalGrad2)" stroke="#4a5568" stroke-width="1"/>
+            <!-- スイングアーム詳細 -->
+            <rect x="220" y="388" width="15" height="6" fill="#4a5568" stroke="#2d3748" stroke-width="0.5"/>
+            <rect x="250" y="386" width="15" height="6" fill="#4a5568" stroke="#2d3748" stroke-width="0.5"/>
+            <rect x="280" y="384" width="15" height="6" fill="#4a5568" stroke="#2d3748" stroke-width="0.5"/>
+            <rect x="310" y="384" width="15" height="6" fill="#4a5568" stroke="#2d3748" stroke-width="0.5"/>
+
+            <!-- エンジン・駆動系 -->
+            <g id="engine" transform="translate(280,380)">
+                <!-- クランクケース -->
+                <rect x="0" y="-30" width="70" height="50" rx="5" fill="url(#blackMetal)" stroke="#2d3748" stroke-width="2"/>
+                <!-- 冷却フィン -->
+                <g id="coolingFins">
+                    <rect x="5" y="-28" width="3" height="46" fill="#2a2a2a"/>
+                    <rect x="10" y="-28" width="3" height="46" fill="#1a1a1a"/>
+                    <rect x="15" y="-28" width="3" height="46" fill="#2a2a2a"/>
+                    <rect x="20" y="-28" width="3" height="46" fill="#1a1a1a"/>
+                    <rect x="25" y="-28" width="3" height="46" fill="#2a2a2a"/>
+                    <rect x="30" y="-28" width="3" height="46" fill="#1a1a1a"/>
+                    <rect x="35" y="-28" width="3" height="46" fill="#2a2a2a"/>
+                    <rect x="40" y="-28" width="3" height="46" fill="#1a1a1a"/>
+                    <rect x="45" y="-28" width="3" height="46" fill="#2a2a2a"/>
+                    <rect x="50" y="-28" width="3" height="46" fill="#1a1a1a"/>
+                    <rect x="55" y="-28" width="3" height="46" fill="#2a2a2a"/>
+                    <rect x="60" y="-28" width="3" height="46" fill="#1a1a1a"/>
+                </g>
+                <!-- シリンダーヘッド -->
+                <rect x="10" y="-45" width="50" height="18" rx="3" fill="url(#metalGrad1)" stroke="#4a5568" stroke-width="1.5"/>
+                <!-- 吸気マニホールド -->
+                <path d="M 15,-45 L 15,-55 L 25,-58 L 35,-58 L 45,-55 L 45,-45" fill="url(#chromeGrad)" stroke="#718096" stroke-width="1"/>
+                <!-- エキゾーストパイプ -->
+                <path d="M 55,-35 L 75,-35 L 85,-33 L 95,-30 L 105,-25" fill="none" stroke="url(#engineGlow)" stroke-width="6"/>
+                <path d="M 55,-30 L 75,-30 L 85,-28 L 95,-25 L 105,-20" fill="none" stroke="url(#engineGlow)" stroke-width="6"/>
+                <!-- エキゾースト輝き -->
+                <ellipse cx="105" cy="-23" rx="8" ry="12" fill="url(#exhaustGlow)" opacity="0.7"/>
+                <!-- エンジンボルト -->
+                <circle cx="8" cy="-25" r="2" fill="#606060"/>
+                <circle cx="8" cy="-5" r="2" fill="#606060"/>
+                <circle cx="62" cy="-25" r="2" fill="#606060"/>
+                <circle cx="62" cy="-5" r="2" fill="#606060"/>
+                <!-- オイルクーラー -->
+                <rect x="5" y="22" width="40" height="15" fill="#1a1a1a" stroke="#2d3748" stroke-width="1"/>
+                <g id="coolerFins">
+                    <line x1="7" y1="24" x2="7" y2="35" stroke="#3a3a3a" stroke-width="0.5"/>
+                    <line x1="10" y1="24" x2="10" y2="35" stroke="#3a3a3a" stroke-width="0.5"/>
+                    <line x1="13" y1="24" x2="13" y2="35" stroke="#3a3a3a" stroke-width="0.5"/>
+                    <line x1="16" y1="24" x2="16" y2="35" stroke="#3a3a3a" stroke-width="0.5"/>
+                    <line x1="19" y1="24" x2="19" y2="35" stroke="#3a3a3a" stroke-width="0.5"/>
+                    <line x1="22" y1="24" x2="22" y2="35" stroke="#3a3a3a" stroke-width="0.5"/>
+                    <line x1="25" y1="24" x2="25" y2="35" stroke="#3a3a3a" stroke-width="0.5"/>
+                    <line x1="28" y1="24" x2="28" y2="35" stroke="#3a3a3a" stroke-width="0.5"/>
+                    <line x1="31" y1="24" x2="31" y2="35" stroke="#3a3a3a" stroke-width="0.5"/>
+                    <line x1="34" y1="24" x2="34" y2="35" stroke="#3a3a3a" stroke-width="0.5"/>
+                    <line x1="37" y1="24" x2="37" y2="35" stroke="#3a3a3a" stroke-width="0.5"/>
+                    <line x1="40" y1="24" x2="40" y2="35" stroke="#3a3a3a" stroke-width="0.5"/>
+                    <line x1="43" y1="24" x2="43" y2="35" stroke="#3a3a3a" stroke-width="0.5"/>
+                </g>
+                <!-- チェーンケース -->
+                <path d="M 65,10 L 90,15 L 95,25 L 90,35 L 65,30 Z" fill="url(#blackMetal)" stroke="#2d3748" stroke-width="1.5"/>
+                <!-- チェーン -->
+                <g id="chain" opacity="0.8">
+                    <circle cx="70" cy="20" r="2" fill="#606060"/>
+                    <circle cx="74" cy="21" r="2" fill="#606060"/>
+                    <circle cx="78" cy="22" r="2" fill="#606060"/>
+                    <circle cx="82" cy="23" r="2" fill="#606060"/>
+                    <circle cx="86" cy="24" r="2" fill="#606060"/>
+                </g>
+            </g>
+
+            <!-- フレーム構造 -->
+            <g id="frame">
+                <!-- メインフレーム -->
+                <path d="M 200,400 L 220,370 L 250,340 L 280,320 L 310,310 L 340,305 L 370,305" fill="none" stroke="url(#metalGrad1)" stroke-width="12"/>
+                <path d="M 200,400 L 222,372 L 252,342 L 282,322 L 312,312 L 342,307 L 370,307" fill="none" stroke="#718096" stroke-width="8"/>
+                <!-- サブフレーム -->
+                <path d="M 280,320 L 290,340 L 310,360 L 330,375 L 350,390" fill="none" stroke="url(#metalGrad1)" stroke-width="10"/>
+                <path d="M 280,320 L 292,342 L 312,362 L 332,377 L 350,392" fill="none" stroke="#4a5568" stroke-width="6"/>
+                <!-- フレーム補強材 -->
+                <line x1="250" y1="340" x2="270" y2="370" stroke="#2d3748" stroke-width="6"/>
+                <line x1="280" y1="320" x2="300" y2="350" stroke="#2d3748" stroke-width="6"/>
+                <line x1="310" y1="310" x2="325" y2="340" stroke="#2d3748" stroke-width="6"/>
+                <!-- フレームボルト -->
+                <circle cx="220" cy="370" r="3" fill="#1a1a1a" stroke="#4a5568" stroke-width="1"/>
+                <circle cx="250" cy="340" r="3" fill="#1a1a1a" stroke="#4a5568" stroke-width="1"/>
+                <circle cx="280" cy="320" r="3" fill="#1a1a1a" stroke="#4a5568" stroke-width="1"/>
+                <circle cx="310" cy="310" r="3" fill="#1a1a1a" stroke="#4a5568" stroke-width="1"/>
+                <circle cx="340" cy="305" r="3" fill="#1a1a1a" stroke="#4a5568" stroke-width="1"/>
+            </g>
+
+            <!-- 燃料タンク -->
+            <g id="fuelTank" transform="translate(320,280)">
+                <path d="M 0,0 L 60,0 L 70,10 L 70,35 L 60,45 L 0,45 L -10,35 L -10,10 Z" fill="url(#blackMetal)" stroke="#2d3748" stroke-width="2"/>
+                <!-- タンクグラフィック -->
+                <path d="M 5,10 L 55,10 L 63,20 L 55,30 L 5,30 Z" fill="#cc0000" opacity="0.8"/>
+                <text x="18" y="24" font-family="Arial Black" font-size="12" fill="#ffffff" font-weight="bold">HELL</text>
+                <!-- タンクボルト -->
+                <circle cx="-5" cy="15" r="2" fill="#4a5568"/>
+                <circle cx="-5" cy="30" r="2" fill="#4a5568"/>
+                <circle cx="65" cy="15" r="2" fill="#4a5568"/>
+                <circle cx="65" cy="30" r="2" fill="#4a5568"/>
+                <!-- 給油キャップ -->
+                <circle cx="30" cy="5" r="6" fill="url(#chromeGrad)" stroke="#718096" stroke-width="1"/>
+                <circle cx="30" cy="5" r="4" fill="#2d3748"/>
+                <circle cx="30" cy="5" r="2" fill="#1a1a1a"/>
+            </g>
+
+            <!-- シート -->
+            <g id="seat" transform="translate(340,300)">
+                <path d="M 0,0 L 50,0 L 60,5 L 65,15 L 60,25 L 45,30 L 0,30 Z" fill="#1a1a1a" stroke="#2d3748" stroke-width="2"/>
+                <!-- シート縫い目 -->
+                <line x1="5" y1="8" x2="55" y2="8" stroke="#4a4a4a" stroke-width="0.5" stroke-dasharray="2,2"/>
+                <line x1="5" y1="15" x2="58" y2="15" stroke="#4a4a4a" stroke-width="0.5" stroke-dasharray="2,2"/>
+                <line x1="5" y1="22" x2="50" y2="22" stroke="#4a4a4a" stroke-width="0.5" stroke-dasharray="2,2"/>
+            </g>
+
+            <!-- フロントフォーク -->
+            <g id="frontFork" transform="translate(520,280)">
+                <!-- フォークトップ -->
+                <rect x="0" y="0" width="25" height="20" rx="3" fill="url(#chromeGrad)" stroke="#718096" stroke-width="2"/>
+                <!-- トリプルクランプ -->
+                <rect x="-5" y="15" width="35" height="12" rx="2" fill="url(#metalGrad1)" stroke="#4a5568" stroke-width="1.5"/>
+                <!-- フォークチューブ左 -->
+                <rect x="2" y="25" width="8" height="100" fill="url(#chromeGrad)" stroke="#a0aec0" stroke-width="1"/>
+                <!-- フォークチューブ右 -->
+                <rect x="15" y="25" width="8" height="100" fill="url(#chromeGrad)" stroke="#a0aec0" stroke-width="1"/>
+                <!-- フォークスライダー左 -->
+                <rect x="1" y="80" width="10" height="45" fill="url(#blackMetal)" stroke="#2d3748" stroke-width="1.5"/>
+                <!-- フォークスライダー右 -->
+                <rect x="14" y="80" width="10" height="45" fill="url(#blackMetal)" stroke="#2d3748" stroke-width="1.5"/>
+                <!-- ブレーキキャリパー -->
+                <rect x="20" y="110" width="15" height="20" rx="2" fill="url(#redGlow)" stroke="#cc0000" stroke-width="2"/>
+                <circle cx="27" cy="120" r="3" fill="#1a1a1a"/>
+                <!-- ブレーキホース -->
+                <path d="M 27,110 Q 25,90 20,70 Q 18,50 15,30" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+            </g>
+
+            <!-- 前輪 -->
+            <g id="frontWheel" transform="translate(520,410)">
+                <!-- タイヤ外周 -->
+                <circle cx="0" cy="0" r="55" fill="url(#tireGrad)" stroke="#000" stroke-width="2"/>
+                <!-- トレッドパターン -->
+                <g id="tread2">
+                    <path d="M -50,-10 L -55,-10 L -55,10 L -50,10" fill="#0a0a0a"/>
+                    <path d="M -35,-35 L -40,-35 L -40,-25 L -35,-25" fill="#0a0a0a"/>
+                    <path d="M -10,-50 L -10,-55 L 10,-55 L 10,-50" fill="#0a0a0a"/>
+                    <path d="M 25,-40 L 25,-45 L 35,-45 L 35,-40" fill="#0a0a0a"/>
+                    <path d="M 45,-20 L 50,-20 L 50,-10 L 45,-10" fill="#0a0a0a"/>
+                    <path d="M 50,10 L 55,10 L 55,20 L 50,20" fill="#0a0a0a"/>
+                    <path d="M 35,35 L 40,35 L 40,40 L 35,40" fill="#0a0a0a"/>
+                    <path d="M 10,50 L 10,55 L -10,55 L -10,50" fill="#0a0a0a"/>
+                    <path d="M -25,40 L -25,45 L -35,45 L -35,40" fill="#0a0a0a"/>
+                    <path d="M -45,15 L -50,15 L -50,5 L -45,5" fill="#0a0a0a"/>
+                </g>
+                <!-- ホイールリム -->
+                <circle cx="0" cy="0" r="42" fill="url(#chromeGrad)" stroke="#4a5568" stroke-width="1"/>
+                <!-- スポーク構造 -->
+                <g id="spokes2" stroke="#2d3748" stroke-width="2" fill="none">
+                    <line x1="0" y1="0" x2="0" y2="-38"/>
+                    <line x1="0" y1="0" x2="33" y2="-19"/>
+                    <line x1="0" y1="0" x2="33" y2="19"/>
+                    <line x1="0" y1="0" x2="0" y2="38"/>
+                    <line x1="0" y1="0" x2="-33" y2="19"/>
+                    <line x1="0" y1="0" x2="-33" y2="-19"/>
+                    <line x1="0" y1="0" x2="27" y2="-27"/>
+                    <line x1="0" y1="0" x2="27" y2="27"/>
+                    <line x1="0" y1="0" x2="-27" y2="27"/>
+                    <line x1="0" y1="0" x2="-27" y2="-27"/>
+                </g>
+                <!-- ブレーキディスク -->
+                <circle cx="-5" cy="0" r="35" fill="#ff4500" opacity="0.3" stroke="#ff0000" stroke-width="1"/>
+                <circle cx="-5" cy="0" r="30" fill="none" stroke="#cc0000" stroke-width="1"/>
+                <circle cx="-5" cy="0" r="25" fill="none" stroke="#aa0000" stroke-width="1"/>
+                <!-- ハブ中心 -->
+                <circle cx="0" cy="0" r="12" fill="url(#blackMetal)" stroke="#1a1a1a" stroke-width="1"/>
+                <!-- ハブボルト -->
+                <circle cx="0" cy="-8" r="2" fill="#4a5568"/>
+                <circle cx="7" cy="-4" r="2" fill="#4a5568"/>
+                <circle cx="7" cy="4" r="2" fill="#4a5568"/>
+                <circle cx="0" cy="8" r="2" fill="#4a5568"/>
+                <circle cx="-7" cy="4" r="2" fill="#4a5568"/>
+                <circle cx="-7" cy="-4" r="2" fill="#4a5568"/>
+            </g>
+
+            <!-- ハンドルバー -->
+            <g id="handlebar" transform="translate(520,270)">
+                <path d="M -40,10 L -20,5 L 0,5 L 25,5 L 45,10" fill="none" stroke="url(#chromeGrad)" stroke-width="8"/>
+                <path d="M -40,10 L -20,7 L 0,7 L 25,7 L 45,10" fill="none" stroke="#a0aec0" stroke-width="4"/>
+                <!-- グリップ左 -->
+                <ellipse cx="-40" cy="10" rx="8" ry="5" fill="#1a1a1a" stroke="#2d3748" stroke-width="1"/>
+                <line x1="-44" y1="10" x2="-36" y2="10" stroke="#3a3a3a" stroke-width="0.5"/>
+                <line x1="-42" y1="8" x2="-38" y2="8" stroke="#3a3a3a" stroke-width="0.5"/>
+                <line x1="-42" y1="12" x2="-38" y2="12" stroke="#3a3a3a" stroke-width="0.5"/>
+                <!-- グリップ右 -->
+                <ellipse cx="45" cy="10" rx="8" ry="5" fill="#1a1a1a" stroke="#2d3748" stroke-width="1"/>
+                <line x1="41" y1="10" x2="49" y2="10" stroke="#3a3a3a" stroke-width="0.5"/>
+                <line x1="42" y1="8" x2="48" y2="8" stroke="#3a3a3a" stroke-width="0.5"/>
+                <line x1="42" y1="12" x2="48" y2="12" stroke="#3a3a3a" stroke-width="0.5"/>
+                <!-- ミラー左 -->
+                <line x1="-35" y1="8" x2="-45" y2="-5" stroke="#2d3748" stroke-width="3"/>
+                <ellipse cx="-48" cy="-8" rx="10" ry="7" fill="#1a1a1a" stroke="#4a5568" stroke-width="1" opacity="0.7"/>
+                <!-- ミラー右 -->
+                <line x1="40" y1="8" x2="50" y2="-5" stroke="#2d3748" stroke-width="3"/>
+                <ellipse cx="53" cy="-8" rx="10" ry="7" fill="#1a1a1a" stroke="#4a5568" stroke-width="1" opacity="0.7"/>
+                <!-- レバー左 -->
+                <path d="M -25,5 L -30,0 L -32,-2" fill="none" stroke="#4a5568" stroke-width="3"/>
+                <!-- レバー右 -->
+                <path d="M 30,5 L 35,0 L 37,-2" fill="none" stroke="#4a5568" stroke-width="3"/>
+            </g>
+
+            <!-- ヘッドライト -->
+            <g id="headlight" transform="translate(540,260)">
+                <circle cx="0" cy="0" r="18" fill="url(#blackMetal)" stroke="#2d3748" stroke-width="2"/>
+                <circle cx="0" cy="0" r="14" fill="url(#yellowGlow)" opacity="0.9"/>
+                <circle cx="-3" cy="-3" r="4" fill="#ffffff" opacity="0.7"/>
+                <circle cx="0" cy="0" r="10" fill="none" stroke="#ffd700" stroke-width="1"/>
+            </g>
+
+            <!-- カウル・フェアリング -->
+            <g id="fairing">
+                <path d="M 440,320 L 480,310 L 520,305 L 540,308 L 550,320 L 540,340 L 520,350 L 480,345 L 440,340 Z" fill="url(#blackMetal)" stroke="#2d3748" stroke-width="2" opacity="0.9"/>
+                <!-- エアインテーク -->
+                <g id="airIntake">
+                    <rect x="460" y="315" width="4" height="20" fill="#1a1a1a"/>
+                    <rect x="466" y="315" width="4" height="20" fill="#1a1a1a"/>
+                    <rect x="472" y="315" width="4" height="20" fill="#1a1a1a"/>
+                    <rect x="478" y="315" width="4" height="20" fill="#1a1a1a"/>
+                    <rect x="484" y="315" width="4" height="20" fill="#1a1a1a"/>
+                    <rect x="490" y="315" width="4" height="20" fill="#1a1a1a"/>
+                    <rect x="496" y="315" width="4" height="20" fill="#1a1a1a"/>
+                </g>
+                <!-- スクリーン -->
+                <path d="M 520,300 L 545,280 L 555,285 L 545,310 L 520,315 Z" fill="#1a1a1a" stroke="#2d3748" stroke-width="1.5" opacity="0.4"/>
+            </g>
+
+            <!-- ペリカンライダー本体 -->
+            <g id="pelicanRider" transform="translate(380,240)">
+                <!-- 胴体下部 -->
+                <ellipse cx="0" cy="40" rx="28" ry="35" fill="url(#pelicanBody)" stroke="#909090" stroke-width="2"/>
+                <!-- 羽ディテール -->
+                <g id="bodyFeathers">
+                    <path d="M -20,25 Q -18,28 -20,31" fill="none" stroke="#b0b0b0" stroke-width="1"/>
+                    <path d="M -22,32 Q -20,35 -22,38" fill="none" stroke="#b0b0b0" stroke-width="1"/>
+                    <path d="M -20,40 Q -18,43 -20,46" fill="none" stroke="#b0b0b0" stroke-width="1"/>
+                    <path d="M -15,28 Q -13,31 -15,34" fill="none" stroke="#c0c0c0" stroke-width="0.8"/>
+                    <path d="M -15,36 Q -13,39 -15,42" fill="none" stroke="#c0c0c0" stroke-width="0.8"/>
+                    <path d="M -15,44 Q -13,47 -15,50" fill="none" stroke="#c0c0c0" stroke-width="0.8"/>
+                    <path d="M -10,30 Q -8,33 -10,36" fill="none" stroke="#d0d0d0" stroke-width="0.8"/>
+                    <path d="M -10,38 Q -8,41 -10,44" fill="none" stroke="#d0d0d0" stroke-width="0.8"/>
+                    <path d="M -10,46 Q -8,49 -10,52" fill="none" stroke="#d0d0d0" stroke-width="0.8"/>
+                </g>
+
+                <!-- 首 -->
+                <path d="M 0,20 Q 5,10 10,0" fill="url(#pelicanBody)" stroke="#909090" stroke-width="2"/>
+                <path d="M 2,18 Q 6,11 9,2" fill="none" stroke="#c0c0c0" stroke-width="1"/>
+
+                <!-- 頭部 -->
+                <ellipse cx="12" cy="-5" rx="15" ry="12" fill="url(#pelicanBody)" stroke="#909090" stroke-width="2"/>
+                <!-- 頭部羽ディテール -->
+                <path d="M 5,-8 Q 7,-6 5,-4" fill="none" stroke="#b0b0b0" stroke-width="0.8"/>
+                <path d="M 8,-10 Q 10,-8 8,-6" fill="none" stroke="#b0b0b0" stroke-width="0.8"/>
+                <path d="M 12,-11 Q 14,-9 12,-7" fill="none" stroke="#c0c0c0" stroke-width="0.8"/>
+                <path d="M 16,-9 Q 18,-7 16,-5" fill="none" stroke="#c0c0c0" stroke-width="0.8"/>
+
+                <!-- ヘルメット（Heavy Metal） -->
+                <path d="M 5,-15 L 20,-15 L 24,-10 L 24,-2 L 20,2 L 5,2 L 2,-2 L 2,-10 Z" fill="url(#blackMetal)" stroke="#ff0000" stroke-width="2"/>
+                <!-- ヘルメットディテール -->
+                <line x1="7" y1="-13" x2="18" y2="-13" stroke="#ff0000" stroke-width="1"/>
+                <line x1="7" y1="-8" x2="18" y2="-8" stroke="#cc0000" stroke-width="0.5"/>
+                <line x1="7" y1="-4" x2="18" y2="-4" stroke="#cc0000" stroke-width="0.5"/>
+                <circle cx="22" cy="-6" r="2" fill="#ff0000" opacity="0.5"/>
+                <!-- バイザー -->
+                <path d="M 20,-10 L 28,-8 L 28,-4 L 20,-2" fill="#1a1a1a" stroke="#4a5568" stroke-width="1" opacity="0.6"/>
+                <!-- ヘルメットスパイク -->
+                <polygon points="8,-15 10,-20 12,-15" fill="#ff0000" stroke="#cc0000" stroke-width="1"/>
+                <polygon points="13,-15 15,-22 17,-15" fill="#ff0000" stroke="#cc0000" stroke-width="1"/>
+
+                <!-- 目 -->
+                <circle cx="15" cy="-6" r="3" fill="#ffff00" stroke="#000" stroke-width="1"/>
+                <circle cx="15" cy="-6" r="1.5" fill="#000"/>
+
+                <!-- くちばし上部 -->
+                <path d="M 25,-5 L 50,-8 L 52,-5 L 48,-3 L 25,-2" fill="url(#pelicanBeak)" stroke="#cc5500" stroke-width="1.5"/>
+                <!-- くちばし下部（袋） -->
+                <path d="M 25,-2 L 48,-3 L 50,5 L 45,12 L 35,15 L 25,12 Z" fill="#ff9955" stroke="#cc5500" stroke-width="1.5"/>
+                <path d="M 25,-2 L 48,-3 L 50,5 L 45,12 L 35,15 L 25,12 Z" fill="#ff6600" stroke="#cc5500" stroke-width="1.5" opacity="0.5"/>
+                <!-- くちばし袋のしわ -->
+                <path d="M 28,2 Q 35,8 42,6" fill="none" stroke="#dd7744" stroke-width="1"/>
+                <path d="M 27,6 Q 35,11 43,9" fill="none" stroke="#dd7744" stroke-width="1"/>
+                <path d="M 28,10 Q 35,13 40,12" fill="none" stroke="#dd7744" stroke-width="1"/>
+
+                <!-- 翼（機械化）左 -->
+                <g id="leftWing">
+                    <path d="M -28,35 L -55,25 L -75,20 L -85,22 L -75,30 L -55,35 L -28,45 Z" fill="url(#wingMetal)" stroke="#606060" stroke-width="2"/>
+                    <!-- 翼フレーム -->
+                    <line x1="-28" y1="38" x2="-80" y2="23" stroke="#4a4a4a" stroke-width="3"/>
+                    <line x1="-28" y1="42" x2="-75" y2="28" stroke="#4a4a4a" stroke-width="2"/>
+                    <!-- 羽根 -->
+                    <path d="M -55,25 L -58,20 L -62,22 L -60,27" fill="#c0c0c0" stroke="#909090" stroke-width="0.5"/>
+                    <path d="M -60,27 L -63,23 L -67,25 L -65,30" fill="#b0b0b0" stroke="#808080" stroke-width="0.5"/>
+                    <path d="M -65,30 L -68,26 L -72,28 L -70,33" fill="#a0a0a0" stroke="#707070" stroke-width="0.5"/>
+                    <path d="M -70,33 L -73,29 L -77,31 L -75,35" fill="#909090" stroke="#606060" stroke-width="0.5"/>
+                    <!-- 機械関節 -->
+                    <circle cx="-28" cy="38" r="3" fill="url(#blackMetal)" stroke="#2d3748" stroke-width="1"/>
+                    <circle cx="-45" cy="32" r="2.5" fill="url(#blackMetal)" stroke="#2d3748" stroke-width="1"/>
+                    <circle cx="-65" cy="26" r="2" fill="url(#blackMetal)" stroke="#2d3748" stroke-width="1"/>
+                    <!-- 油圧シリンダー -->
+                    <rect x="-50" y="30" width="15" height="4" rx="1" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1"/>
+                    <rect x="-48" y="31" width="3" height="2" fill="#4a5568"/>
+                </g>
+
+                <!-- 翼（機械化）右 -->
+                <g id="rightWing">
+                    <path d="M 28,45 L 40,40 L 50,38 L 58,40 L 52,45 L 40,48 L 28,50 Z" fill="url(#wingMetal)" stroke="#606060" stroke-width="2"/>
+                    <!-- 翼フレーム -->
+                    <line x1="28" y1="47" x2="55" y2="41" stroke="#4a4a4a" stroke-width="2.5"/>
+                    <!-- 羽根 -->
+                    <path d="M 42,40 L 44,37 L 47,39 L 45,43" fill="#c0c0c0" stroke="#909090" stroke-width="0.5"/>
+                    <path d="M 47,39 L 49,36 L 52,38 L 50,42" fill="#b0b0b0" stroke="#808080" stroke-width="0.5"/>
+                    <path d="M 52,40 L 54,37 L 57,39 L 55,43" fill="#a0a0a0" stroke="#707070" stroke-width="0.5"/>
+                    <!-- 機械関節 -->
+                    <circle cx="28" cy="47" r="3" fill="url(#blackMetal)" stroke="#2d3748" stroke-width="1"/>
+                    <circle cx="40" cy="43" r="2.5" fill="url(#blackMetal)" stroke="#2d3748" stroke-width="1"/>
+                    <!-- 油圧シリンダー -->
+                    <rect x="32" y="44" width="12" height="4" rx="1" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1"/>
+                    <rect x="34" y="45" width="3" height="2" fill="#4a5568"/>
+                </g>
+
+                <!-- 脚（機械化） -->
+                <g id="legs">
+                    <!-- 左脚 -->
+                    <path d="M -12,70 L -15,85 L -13,90" fill="none" stroke="url(#metalGrad1)" stroke-width="5"/>
+                    <rect x="-17" y="72" width="6" height="8" rx="1" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1"/>
+                    <circle cx="-14" cy="86" r="2.5" fill="url(#blackMetal)" stroke="#2d3748" stroke-width="1"/>
+                    <!-- 左足 -->
+                    <path d="M -13,90 L -18,92 L -15,94 L -10,92" fill="#ff8c00" stroke="#cc5500" stroke-width="1"/>
+                    <line x1="-18" y1="92" x2="-20" y2="95" stroke="#cc5500" stroke-width="1.5"/>
+                    <line x1="-15" y1="94" x2="-15" y2="97" stroke="#cc5500" stroke-width="1.5"/>
+                    <line x1="-10" y1="92" x2="-8" y2="95" stroke="#cc5500" stroke-width="1.5"/>
+
+                    <!-- 右脚 -->
+                    <path d="M 8,70 L 12,85 L 10,90" fill="none" stroke="url(#metalGrad1)" stroke-width="5"/>
+                    <rect x="9" y="72" width="6" height="8" rx="1" fill="#2a2a2a" stroke="#1a1a1a" stroke-width="1"/>
+                    <circle cx="12" cy="86" r="2.5" fill="url(#blackMetal)" stroke="#2d3748" stroke-width="1"/>
+                    <!-- 右足（ペダル上） -->
+                    <path d="M 10,90 L 8,95 L 12,97 L 15,94" fill="#ff8c00" stroke="#cc5500" stroke-width="1"/>
+                </g>
+
+                <!-- ライダージャケット（レザー） -->
+                <path d="M -20,30 L -25,50 L -20,68 L 0,75 L 20,68 L 25,50 L 20,30" fill="#1a1a1a" stroke="#2d3748" stroke-width="2" opacity="0.8"/>
+                <!-- ジャケットジッパー -->
+                <line x1="0" y1="32" x2="0" y2="70" stroke="#606060" stroke-width="2"/>
+                <circle cx="0" cy="35" r="1.5" fill="#808080"/>
+                <circle cx="0" cy="42" r="1.5" fill="#808080"/>
+                <circle cx="0" cy="49" r="1.5" fill="#808080"/>
+                <circle cx="0" cy="56" r="1.5" fill="#808080"/>
+                <circle cx="0" cy="63" r="1.5" fill="#808080"/>
+                <!-- スカルエンブレム -->
+                <ellipse cx="10" cy="50" rx="6" ry="7" fill="#ff0000" opacity="0.8"/>
+                <ellipse cx="8" cy="48" rx="1.5" ry="2" fill="#000"/>
+                <ellipse cx="12" cy="48" rx="1.5" ry="2" fill="#000"/>
+            </g>
+
+            <!-- ヘッドライト光線 -->
+            <path d="M 540,260 L 700,240 L 720,260 L 700,280 L 540,270 Z" fill="url(#yellowGlow)" opacity="0.2"/>
+
+            <!-- エキゾーストフレア -->
+            <g id="exhaustFlare">
+                <ellipse cx="395" cy="355" rx="20" ry="8" fill="url(#exhaustGlow)" opacity="0.6"/>
+                <ellipse cx="390" cy="350" rx="15" ry="6" fill="#00ffff" opacity="0.4"/>
+            </g>
+
+            <!-- 装飾パーツ - スパイク -->
+            <g id="spikes">
+                <polygon points="340,305 345,295 350,305" fill="#606060" stroke="#2d3748" stroke-width="1"/>
+                <polygon points="360,305 365,295 370,305" fill="#606060" stroke="#2d3748" stroke-width="1"/>
+                <polygon points="450,330 455,320 460,330" fill="#606060" stroke="#2d3748" stroke-width="1"/>
+            </g>
+
+            <!-- サイドバッグ -->
+            <g id="sideBag" transform="translate(300,350)">
+                <rect x="0" y="0" width="35" height="30" rx="3" fill="url(#blackMetal)" stroke="#2d3748" stroke-width="2"/>
+                <line x1="5" y1="0" x2="5" y2="30" stroke="#1a1a1a" stroke-width="1"/>
+                <line x1="30" y1="0" x2="30" y2="30" stroke="#1a1a1a" stroke-width="1"/>
+                <rect x="12" y="12" width="10" height="8" rx="1" fill="#4a5568" stroke="#2d3748" stroke-width="1"/>
+            </g>
+
+            <!-- フットペグ -->
+            <g id="footpegs">
+                <rect x="330" y="370" width="15" height="5" rx="1" fill="url(#chromeGrad)" stroke="#718096" stroke-width="1"/>
+                <rect x="405" y="375" width="15" height="5" rx="1" fill="url(#chromeGrad)" stroke="#718096" stroke-width="1"/>
+            </g>
+
+            <!-- ナンバープレート -->
+            <g id="licensePlate" transform="translate(160,380)">
+                <rect x="0" y="0" width="30" height="15" rx="1" fill="#ffff00" stroke="#000" stroke-width="1"/>
+                <text x="15" y="11" font-family="Arial" font-size="8" fill="#000" text-anchor="middle" font-weight="bold">HELL</text>
+            </g>
+
+            <!-- テールライト -->
+            <g id="tailLight" transform="translate(145,370)">
+                <rect x="0" y="0" width="12" height="8" rx="1" fill="url(#redGlow)" stroke="#cc0000" stroke-width="1"/>
+                <rect x="2" y="2" width="3" height="4" fill="#ff6666" opacity="0.8"/>
+                <rect x="7" y="2" width="3" height="4" fill="#ff6666" opacity="0.8"/>
+            </g>
+
+            <!-- チェーン駆動系ディテール -->
+            <g id="chainDrive" opacity="0.7">
+                <circle cx="200" cy="400" r="15" fill="none" stroke="#606060" stroke-width="2"/>
+                <circle cx="520" cy="410" r="12" fill="none" stroke="#606060" stroke-width="2"/>
+            </g>
+
+            <!-- サスペンションスプリング -->
+            <g id="suspension">
+                <path d="M 350,390 L 352,385 L 354,390 L 356,385 L 358,390 L 360,385 L 362,390 L 364,385 L 366,390 L 368,385 L 370,390" fill="none" stroke="#ff6600" stroke-width="2"/>
+            </g>
+        </svg>
+    </div>
+</body>
+</html>
